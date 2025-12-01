@@ -18,21 +18,21 @@ curl -X POST "https://ominous-chainsaw-v69pqv4xrp6rcwwgx-8000.app.github.dev/api
     "year": 2
   }'
 
-# # D. Update Student
-# curl -X PUT "http://localhost:8000/api/students/1" \
-#   -H "Content-Type: application/json" \
-#   -d '{
-#     "name": "Alice Updated",
-#     "email": "alice_new@example.com",
-#     "course": "Data Science",
-#     "year": 3
-#   }'
+# D. Update Student
+curl -X PUT "https://ominous-chainsaw-v69pqv4xrp6rcwwgx-8000.app.github.dev/api/students/1" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Alice Updated",
+    "email": "alice_new@example.com",
+    "course": "Data Science",
+    "year": 3
+  }'
 
-# # E. Delete Student
-# curl -X DELETE "http://localhost:8000/api/students/1"
+# E. Delete Student
+curl -X DELETE "https://ominous-chainsaw-v69pqv4xrp6rcwwgx-8000.app.github.dev/api/students"
 
 
-# ##################### DB Observation Via SQLite Web
-# - install https://github.com/coleifer/sqlite-web
-# - pip install sqlite-web
-# - sqlite_web students.db
+##################### DB Observation Via SQLite Web
+- install https://github.com/coleifer/sqlite-web
+- pip install sqlite-web
+- sqlite_web students.db
