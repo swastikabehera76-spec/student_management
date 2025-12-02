@@ -29,10 +29,10 @@ curl -X PUT "https://ominous-chainsaw-v69pqv4xrp6rcwwgx-8000.app.github.dev/api/
   }'
 
 # E. Delete Student
-curl -X DELETE "https://ominous-chainsaw-v69pqv4xrp6rcwwgx-8000.app.github.dev/api/students"
+curl -X DELETE "https://ominous-chainsaw-v69pqv4xrp6rcwwgx-8000.app.github.dev/api/students/1"
 
 
-##################### DB Observation Via SQLite Web
-- install https://github.com/coleifer/sqlite-web
-- pip install sqlite-web
-- sqlite_web students.db
+# ##################### DB Observation Via SQLite Web
+# - install https://github.com/coleifer/sqlite-web
+# - pip install sqlite-web
+# - sqlite_web students.db

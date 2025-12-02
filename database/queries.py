@@ -29,9 +29,9 @@ def db_update(student_id, data):
     conn = get_connection()
     now = datetime.now().isoformat()
     conn.execute("""
-        UPDATE students SET name=?, email=?, course=?, year=?, update_at=?
+        UPDATE students SET name=?, email=?, course=?, year=?, updated_at=?
         WHERE id=?
-        """, (data["name"], data["email"], data["course"], data["year"], now, student_id))
+    """, (data["name"], data["email"], data["course"], data["year"], now, student_id))
     conn.commit()
     conn.close()
     return db_get_one(student_id)
@@ -42,7 +42,7 @@ def db_delete(student_id):
         return None
 
     conn = get_connection()
-    conn.execute("DELETE FROM student WHERE id=?", (student_id))
+    conn.execute("DELETE FROM students WHERE id=?", (student_id,))
     conn.commit()
     conn.close()
-    return student    
+    return student
